@@ -57,7 +57,7 @@ var qData = [
   }
 ];
 
-var startTime = 11
+var startTime = 11;
 var currentQuestion = 0;
 var correctCount = 0;
 var incorrectCount = 0;
@@ -66,12 +66,25 @@ var intervalVar;
 
 $(document).read(function() {
   console.log(qData[0].question);
-  $(#start).on("click", function() {
+  $("#start").on("click", function() {
     showQuestion();
     intervalVar = setInterval(countDown, 1000);
-  })
+  });
   function showQuestion() {
     $("#question").empty();
-    $("#start").empty();
+    $(".form").empty();
+    $("#question").text(qData[currentQuestion].question);
+    $(".form").append(
+      "<button class='answer1'>" + qData[currentQuestion].answer1 + "</button>"
+    );
+    $(".form").append(
+      "<button class='answer2'>" + qData[currentQuestion].answer2 + "</button>"
+    );
+    $(".form").append(
+      "<button class='answer3'>" + qData[currentQuestion].answer3 + "</button>"
+    );
+    $(".form").append(
+      "<button class='answer4'>" + qData[currentQuestion].answer4 + "</button>"
+    );
   }
-})
+});

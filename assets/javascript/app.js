@@ -64,9 +64,10 @@ var incorrectCount = 0;
 var unanswered = 0;
 var intervalVar;
 
-$(document).read(function() {
+$(document).ready(function() {
   console.log(qData[0].question);
   $("#start").on("click", function() {
+    $("#start").hide();
     showQuestion();
     intervalVar = setInterval(countDown, 1000);
   });
@@ -75,16 +76,24 @@ $(document).read(function() {
     $(".form").empty();
     $("#question").text(qData[currentQuestion].question);
     $(".form").append(
-      "<button class='answer1'>" + qData[currentQuestion].answer1 + "</button>"
+      "<button class='btn-lg btn-secondary hvr-back-pulse answer1'>" +
+        qData[currentQuestion].answer1 +
+        "</button>"
     );
     $(".form").append(
-      "<button class='answer2'>" + qData[currentQuestion].answer2 + "</button>"
+      "<button class='btn-lg btn-secondary hvr-back-pulse answer2'>" +
+        qData[currentQuestion].answer2 +
+        "</button>"
     );
     $(".form").append(
-      "<button class='answer3'>" + qData[currentQuestion].answer3 + "</button>"
+      "<button class='btn-lg btn-secondary hvr-back-pulse answer3'>" +
+        qData[currentQuestion].answer3 +
+        "</button>"
     );
     $(".form").append(
-      "<button class='answer4'>" + qData[currentQuestion].answer4 + "</button>"
+      "<button class='btn-lg btn-secondary hvr-back-pulse answer4'>" +
+        qData[currentQuestion].answer4 +
+        "</button>"
     );
   }
 });

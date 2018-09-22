@@ -1,4 +1,4 @@
-var questions = [
+var qData = [
   {
     question: "What is the name of the Super Mario Bros. sidekick dinosaur?",
     answer1: "Birdo",
@@ -56,3 +56,22 @@ var questions = [
     correct: "Melon"
   }
 ];
+
+var startTime = 11
+var currentQuestion = 0;
+var correctCount = 0;
+var incorrectCount = 0;
+var unanswered = 0;
+var intervalVar;
+
+$(document).read(function() {
+  console.log(qData[0].question);
+  $(#start).on("click", function() {
+    showQuestion();
+    intervalVar = setInterval(countDown, 1000);
+  })
+  function showQuestion() {
+    $("#question").empty();
+    $("#start").empty();
+  }
+})

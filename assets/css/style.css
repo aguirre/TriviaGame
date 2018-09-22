@@ -1,0 +1,24 @@
+body {
+  padding-top: 20px;
+  /* font-family: "Teko", Arial; */
+  color: white;
+  text-shadow: 2px 2px 4px #000;
+  background: url("../images/bg.gif") no-repeat;
+}
+.container {
+  text-align: center;
+}
+#restart {
+  display: none;
+}
+.gameplayCol {
+  padding-top: 20px;
+  border: 4px outset #333;
+  text-align: center;
+  margin-top: 20px;
+  min-height: 600px;
+  background-color: rgba(51, 51, 51, 0.8);
+}
+h1 {
+  padding: 7px;
+}

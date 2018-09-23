@@ -1,10 +1,10 @@
 var qData = [
   {
     question: "What is the name of the Super Mario Bros. sidekick dinosaur?",
-    answer1: "Birdo",
-    answer2: "Yoshi",
-    answer3: "Dino",
-    answer4: "Yoda",
+    answer1: "Yoda",
+    answer2: "Dino",
+    answer3: "Yoshi",
+    answer4: "Birdo",
     correct: "Yoshi",
     image: "assets/images/yoshi.gif"
   },
@@ -172,8 +172,14 @@ $(document).ready(function() {
   }
 
   $("#restart").on("click", function() {
-    console.log("Restart selected");
     $("#result").empty();
     $("#restart").hide();
+    startTime = 11;
+    currentQuestion = 0;
+    correctCount = 0;
+    incorrectCount = 0;
+    unanswered = 0;
+    showQuestion();
+    intervalVar = setInterval(timer, 1000);
   });
 });

@@ -69,7 +69,7 @@ var currentQuestion = 0;
 var correctCount = 0;
 var incorrectCount = 0;
 var unanswered = 0;
-var intervalVar;
+var intervalId;
 
 var correctSound = new Audio("assets/sounds/correct.mp3");
 var wrongSound = new Audio("assets/sounds/wrong.mp3");
@@ -78,7 +78,7 @@ $(document).ready(function() {
   $("#start").on("click", function() {
     $("#start").hide();
     showQuestion();
-    intervalVar = setInterval(timer, 1000);
+    intervalId = setInterval(timer, 1000);
   });
 
   function showQuestion() {
@@ -111,7 +111,7 @@ $(document).ready(function() {
     startTime--;
     $("#timer").text("Time Left: " + startTime);
     if (startTime === 0) {
-      clearInterval(intervalVar);
+      clearInterval(intervalId);
       unanswered++;
       $("#alert").html(
         "Out of Time!<br>Correct Answer: " + qData[currentQuestion].correct
@@ -137,7 +137,7 @@ $(document).ready(function() {
   });
 
   function checkAnswer(answer) {
-    clearInterval(intervalVar);
+    clearInterval(intervalId);
     if (answer === qData[currentQuestion].correct) {
       $("#alert").html("Correct!<br>" + qData[currentQuestion].correct);
       correctSound.play();
@@ -163,7 +163,7 @@ $(document).ready(function() {
     $("#alert").empty();
 
     if (currentQuestion == qData.length) {
-      clearInterval(intervalVar);
+      clearInterval(intervalId);
       $("#alert").empty();
       $("#question").empty();
       $("#result").append("Correct: " + correctCount + "<br>");
@@ -173,7 +173,7 @@ $(document).ready(function() {
     } else {
       showQuestion();
       startTime = 11;
-      intervalVar = setInterval(timer, 1000);
+      intervalId = setInterval(timer, 1000);
     }
   }
 
@@ -186,6 +186,6 @@ $(document).ready(function() {
     incorrectCount = 0;
     unanswered = 0;
     showQuestion();
-    intervalVar = setInterval(timer, 1000);
+    intervalId = setInterval(timer, 1000);
   });
 });

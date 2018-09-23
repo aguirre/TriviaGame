@@ -36,6 +36,15 @@ var qData = [
     image: "assets/images/sonic.gif"
   },
   {
+    question: "What year was Tony Hawk's Pro Skater released?",
+    answer1: "1999",
+    answer2: "2000",
+    answer3: "1998",
+    answer4: "2001",
+    correct: "1999",
+    image: "assets/images/thps.gif"
+  },
+  {
     question: "Who is the main character in Half-Life?",
     answer1: "Adrian Shephard",
     answer2: "Gordon Freeman",
@@ -45,6 +54,15 @@ var qData = [
     image: "assets/images/gordon.gif"
   },
   {
+    question: "What first-person shooter was originaly a mod of Half-Life?",
+    answer1: "Call Of Duty",
+    answer2: "Rainbow Six",
+    answer3: "Battlefield",
+    answer4: "Counter-Strike",
+    correct: "Counter-Strike",
+    image: "assets/images/cs.gif"
+  },
+  {
     question: "What is the name of the main AI in Halo?",
     answer1: "Siri",
     answer2: "Alexa",
@@ -52,6 +70,15 @@ var qData = [
     answer4: "Serina",
     correct: "Cortana",
     image: "assets/images/cortana.gif"
+  },
+  {
+    question: "What year was The Last of Us released?",
+    answer1: "2011",
+    answer2: "2013",
+    answer3: "2012",
+    answer4: "2014",
+    correct: "2013",
+    image: "assets/images/lastofus.gif"
   },
   {
     question: "What fruit in PacMan is worth the most points?",

@@ -21,8 +21,8 @@ var qData = [
     question: "Who is the main antagonist in Crash Bandicoot?",
     answer1: "Doctor Robotnik",
     answer2: "Doctor Claw",
-    answer3: "Doctor Cortex",
-    answer4: "Doctor Evil",
+    answer3: "Doctor Evil",
+    answer4: "Doctor Cortex",
     correct: "Doctor Cortex",
     image: "assets/images/crash.gif"
   },
@@ -47,8 +47,8 @@ var qData = [
   {
     question: "What is the name of the main AI in Halo?",
     answer1: "Siri",
-    answer2: "Cortana",
-    answer3: "Alexa",
+    answer2: "Alexa",
+    answer3: "Cortana",
     answer4: "Serina",
     correct: "Cortana",
     image: "assets/images/cortana.gif"
@@ -170,4 +170,10 @@ $(document).ready(function() {
       intervalVar = setInterval(timer, 1000);
     }
   }
+
+  $("#restart").on("click", function() {
+    console.log("Restart selected");
+    $("#result").empty();
+    $("#restart").hide();
+  });
 });

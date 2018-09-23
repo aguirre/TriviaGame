@@ -72,7 +72,6 @@ var unanswered = 0;
 var intervalVar;
 
 $(document).ready(function() {
-  console.log(qData[0].question);
   $("#start").on("click", function() {
     $("#start").hide();
     showQuestion();
@@ -135,9 +134,8 @@ $(document).ready(function() {
 
   function checkAnswer(answer) {
     clearInterval(intervalVar);
-    console.log(answer);
     if (answer === qData[currentQuestion].correct) {
-      $("#alert").text("Correct!");
+      $("#alert").html("Correct!<br>" + qData[currentQuestion].correct);
       $("#image").append("<img src='" + qData[currentQuestion].image + "'>");
       $(".choices").empty();
       setTimeout(resetQuestion, 5000);
@@ -165,6 +163,7 @@ $(document).ready(function() {
       $("#result").append("Correct: " + correctCount + "<br>");
       $("#result").append("Wrong: " + incorrectCount + "<br>");
       $("#result").append("Unanswered: " + unanswered);
+      $("#restart").show();
     } else {
       showQuestion();
       startTime = 11;

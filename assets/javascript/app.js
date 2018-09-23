@@ -71,6 +71,9 @@ var incorrectCount = 0;
 var unanswered = 0;
 var intervalVar;
 
+var correctSound = new Audio("assets/sounds/correct.mp3");
+var wrongSound = new Audio("assets/sounds/wrong.mp3");
+
 $(document).ready(function() {
   $("#start").on("click", function() {
     $("#start").hide();
@@ -113,6 +116,7 @@ $(document).ready(function() {
       $("#alert").html(
         "Out of Time!<br>Correct Answer: " + qData[currentQuestion].correct
       );
+      wrongSound.play();
       $("#image").append("<img src='" + qData[currentQuestion].image + "'>");
       $(".choices").empty();
       setTimeout(resetQuestion, 5000);
@@ -136,6 +140,7 @@ $(document).ready(function() {
     clearInterval(intervalVar);
     if (answer === qData[currentQuestion].correct) {
       $("#alert").html("Correct!<br>" + qData[currentQuestion].correct);
+      correctSound.play();
       $("#image").append("<img src='" + qData[currentQuestion].image + "'>");
       $(".choices").empty();
       setTimeout(resetQuestion, 5000);
@@ -144,6 +149,7 @@ $(document).ready(function() {
       $("#alert").html(
         "Wrong!<br>Correct Answer: " + qData[currentQuestion].correct
       );
+      wrongSound.play();
       $("#image").append("<img src='" + qData[currentQuestion].image + "'>");
       $(".choices").empty();
       setTimeout(resetQuestion, 5000);

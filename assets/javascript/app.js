@@ -38,8 +38,8 @@ var qData = [
   {
     question: "What year was Tony Hawk's Pro Skater released?",
     answer1: "1999",
-    answer2: "2000",
-    answer3: "1998",
+    answer2: "2006",
+    answer3: "1995",
     answer4: "2001",
     correct: "1999",
     image: "assets/images/thps.gif"
@@ -54,7 +54,7 @@ var qData = [
     image: "assets/images/gordon.gif"
   },
   {
-    question: "What first-person shooter was originaly a mod of Half-Life?",
+    question: "What first-person shooter was originally a mod of Half-Life?",
     answer1: "Call Of Duty",
     answer2: "Rainbow Six",
     answer3: "Battlefield",
@@ -75,8 +75,8 @@ var qData = [
     question: "What year was The Last of Us released?",
     answer1: "2011",
     answer2: "2013",
-    answer3: "2012",
-    answer4: "2014",
+    answer3: "2005",
+    answer4: "2016",
     correct: "2013",
     image: "assets/images/lastofus.gif"
   },
